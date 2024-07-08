@@ -84,6 +84,7 @@
 <body>
 
 
+    <audio src="../audio/audio-sdnbs.mp3" controls loop autoplay id="backing-track"></audio>
 
     <h1 class="out-of-page">Salty Squad</h1>
     <div class="container intro hidden">
@@ -94,7 +95,6 @@
                     <li><a href="#upcomming-events-h2">Nadcházející události</a></li>
                     <li><a href="#about-us-h2">O nás</a></li>
                     <li><a href="#contact-h2">Kontakt</a></li>
-                    <li><audio src="../audio/audio-sdnbs.mp3"></audio></li>
                 </ul>
             </nav>
             <ul id="dropdown">
@@ -113,9 +113,10 @@
                 <li><a href=""><i class='bx bxl-youtube'></i></a></li>
                 <li><a href=""><i class='bx bxl-soundcloud'></i></a></li>
                 <li><a href=""><i class='bx bxl-tiktok'></i></a></li>
+                <li onclick="unmute()"><i id="mute-unmute" class='bx bx-volume-mute'></i></li>
             </ul>
         </header>
-        <img src="../img/logo-dark-sdnb-removebg-preview.png" alt="sdnb - logo" class="center">
+        <img src="../img/logo-dark-sdnb-removebg-preview.png" alt="sdnb - logo" class="center" id="intro-img">
 
 
         <video autoplay muted loop>
@@ -191,6 +192,9 @@
         </form>
     </section>
 </article>
+
+    <footer>
+        <p>&copy; 2023 Salty Squad</p>
     <!--SCRIPTS-->
     <script src="../js/email.js"></script>
     <script src="../js/script.js"></script>

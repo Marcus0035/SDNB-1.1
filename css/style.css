@@ -5,7 +5,7 @@
   --light: #f8f9fa;
   --less-light: #dee2e6;
   --main-color: #adb5bd;
-  --less-dark: #495057;
+  --less-dark: #181818; /* was 495057*/
   --dark: #000;
 
   --font-main: "Anton SC", sans-serif;
@@ -74,6 +74,10 @@ video {
   height: 100%;
 }
 
+audio {
+  display: none;
+}
+
 .container {
   max-width: 100em;
   margin: 0 auto;
@@ -127,8 +131,6 @@ header ul li {
   padding: 1em;
 }
 
-
-
 .main-header ul li i:hover,
 .main-header ul li i:active,
 .main-header ul li i:focus,
@@ -178,9 +180,9 @@ header ul li {
   -moz-transform: scale(1.1);
   -ms-transform: scale(1.1);
   -o-transform: scale(1.1);
-  -webkit-box-shadow: 0px 0px 70px 24px rgba(82, 84, 85, 0.62);
-  -moz-box-shadow: 0px 0px 70px 24px rgba(82, 84, 85, 0.62);
-  box-shadow: 0px 0px 70px 24px rgba(82, 84, 85, 0.62);
+  -webkit-box-shadow: 0px 0px 70px 24px rgba(68, 68, 68, 0.62);
+  -moz-box-shadow: 0px 0px 70px 24px rgba(68, 68, 68, 0.62);
+  box-shadow: 0px 0px 70px 24px rgba(68, 68, 68, 0.62);
 }
 
 /* About */
@@ -266,6 +268,19 @@ section > h2 {
   -webkit-filter: opacity(70%);
 }
 
+footer {
+  width: 100%;
+  height: 3em;
+  border-top: 1px solid var(--light);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 0;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+
 @media screen and (max-width: 1200px) {
   .intro .main-header img {
     display: none;
@@ -283,25 +298,20 @@ section > h2 {
 
   .contact {
     width: 80%;
-}
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .upcomming-events img{
-        max-width: 100%;
-        margin: 3em 0;
-    }
-}
-
-@media screen and (max-width: 750px){
-    
+  .upcomming-events img {
+    max-width: 100%;
+    margin: 3em 0;
+  }
 }
 
 @media screen and (max-width: 620px) {
-
-.main-header {
+  .main-header {
     width: auto;
-}
+  }
 
   .main-header ul {
     display: none;
@@ -318,51 +328,46 @@ section > h2 {
 }
 
 @media screen and (max-width: 480px) {
-    section > h2 {
-        font-size: 3.5em;
-    }
+  section > h2 {
+    font-size: 3.5em;
+  }
 
-    .upcomming-events img {
-        margin: 1em 0;
-    }
+  .upcomming-events img {
+    margin: 1em 0;
+  }
 }
 
-
-.pulse {
-  animation-iteration-count: infinite;
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
+.flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  animation-duration: 0.698s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  animation-iteration-count: infinite;
 }
-@-webkit-keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
+@-webkit-keyframes flash {
+  0%,
+  50%,
   100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    opacity: 1;
   }
-}
-@keyframes pulse {
-  0% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-  50% {
-    -webkit-transform: scale3d(1.05, 1.05, 1.05);
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-  100% {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+
+  25%,
+  75% {
+    opacity: 0.4;
   }
 }
 
+@keyframes flash {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  10%,  /* Predtim tu nebylo */ 
+  25%,
+  75% {
+    opacity: 0.4;
+  }
+}
