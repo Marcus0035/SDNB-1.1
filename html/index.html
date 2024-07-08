@@ -65,7 +65,7 @@
           }
         }
     </script>
-    
+
     <script defer src="../js/show-and-hide.js"></script>
 
     <!-- Email -->
@@ -97,7 +97,14 @@
                 </ul>
             </nav>
             <ul id="dropdown">
-                <li><i class='bx bx-menu'></i></li>
+                <li><i class='bx bx-menu' onclick="dropdownShow()"></i></li>
+                <li>
+                    <ul>
+                        <li><a href="#upcomming-events-h2">Nadcházející události</a></li>
+                        <li><a href="#about-us-h2">O nás</a></li>
+                        <li><a href="#contact-h2">Kontakt</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="socials">
                 <li><a href=""><i class='bx bxl-facebook-circle'></i></a></li>
@@ -117,28 +124,33 @@
         </video>
 
     </div>
-        <section class="upcomming-events container hidden">
+    <section class="upcomming-events container hidden">
 
-            <h2 id="upcomming-events-h2">Nadcházející událosi</h2>
-            <ul>
-                <li>
-                    <div class="event hidden">
-                        <a href=""><img src="../img/img-events/event4-sdnb.jpg" alt=""></a>
-                    </div>
-                </li>
-                <li>
-                    <div class="event hidden">
-                        <img src="../img/img-events/event2-sdnb.jpg" alt="">
-                    </div>
-                </li>
-                <li>
-                    <div class="event hidden">
-                        <img src="../img/img-events/event3-sdnb.jpg" alt="">
-                    </div>
-                </li>
-            </ul>
-        </section>
-        <!-- 
+        <h2 id="upcomming-events-h2" class="hidden">Nadcházející událosi</h2>
+        <ul>
+            <li>
+                <div class="event hidden">
+                    <a href=""><img src="../img/img-events/event4-sdnb.jpg" alt=""></a>
+                </div>
+            </li>
+            <li>
+                <div class="event hidden">
+                    <img src="../img/img-events/event2-sdnb.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="event hidden">
+                    <img src="../img/img-events/event3-sdnb.jpg" alt="">
+                </div>
+            </li>
+            <li>
+                <div class="event hidden">
+                    <img src="../img/img-events/event5-sdnb.jpg" alt="">
+                </div>
+            </li>
+        </ul>
+    </section>
+    <!-- 
         <section class="container about-us">
             <h2 id="about-us-h2">O nás</h2>
             <p>Residence certainly elsewhere something she preferred cordially law. Age his surprise formerly
@@ -159,27 +171,28 @@
             </div>
         </section> -->
 
-        <section class="contact  container hidden">
-            <h2 id="contact-h2">Kontakt</h2>
-            <form id="contact-form">
-                <label>
-                    Email:
-                    <input type="email" name="email" placeholder="example@gmail.com" id="contact-email" required>
-                </label>
-                <label>
-                    Předmět:
-                    <input type="text" name="subject" placeholder="Předmet" id="contact-subject" required>
-                </label>
-                <label>
-                    Zpráva:
-                    <textarea name="message" id="contact-message" required rows="10"></textarea>
-                </label>
-                <button type="submit">Odeslat</button>
-            </form>
-        </section>
+    <section class="contact  container">
+        <h2 id="contact-h2">Kontakt</h2>
+        <form id="contact-form">
+            <label>
+                Email:
+                <input type="email" name="email" placeholder="example@gmail.com" id="contact-email" required>
+            </label>
+            <label>
+                Předmět:
+                <input type="text" name="subject" placeholder="Předmet" id="contact-subject" required>
+            </label>
+            <label>
+                Zpráva:
+                <textarea name="message" id="contact-message" required rows="10"></textarea>
+            </label>
+            <button type="submit">Odeslat</button>
+        </form>
+    </section>
     </article>
     <!--SCRIPTS-->
     <script src="../js/email.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

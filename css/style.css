@@ -127,10 +127,7 @@ header ul li {
   padding: 1em;
 }
 
-.main-header ul li i,
-.main-header ul li a {
-  color: var(--light);
-}
+
 
 .main-header ul li i:hover,
 .main-header ul li i:active,
@@ -229,7 +226,6 @@ section > h2 {
 .contact input,
 .contact textarea {
   padding: 0.5em 0;
-  color: var(--light);
   background: transparent;
   border: none;
   border-bottom: solid var(--light) 1px;
@@ -253,7 +249,6 @@ section > h2 {
 
 .contact button {
   background: var(--dark);
-  color: var(--light);
   border: solid 1px var(--less-light);
   padding: 1em;
   border-radius: 5em;
