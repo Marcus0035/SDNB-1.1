@@ -44,13 +44,14 @@
     <link rel="stylesheet" href="../css/normalize.css">
     <link rel="stylesheet" href="../css/style.css">
 
+    <link rel="stylesheet" href="../css/animations.css">
     <!--Icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Icon Top -->
     <link rel="icon" href="../img/logo-dark-sdnb-removebg-preview.png">
-    <!-- Schema.org JSON-LD pro lepší strukturované metadata -->
-    <script type="application/ld+json">
+    <!-- Schema.org JSON-LD pro lepší strukturované metadata DEFER aby to nemuslo byt dole, ale nacte se az po body-->
+    <script defer type="application/ld+json">
         {
           "@context": "http://schema.org",
           "@type": "Organization",
@@ -64,6 +65,8 @@
           }
         }
     </script>
+    
+    <script defer src="../js/show-and-hide.js"></script>
 
     <!-- Email -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
@@ -82,8 +85,8 @@
 
 
 
-    <h1 class="hidden">Salty Squad</h1>
-    <div class="container intro">
+    <h1 class="out-of-page">Salty Squad</h1>
+    <div class="container intro hidden">
         <header class="main-header">
             <img src="../img/logo2-sdnb_1_-removebg-preview.png" alt="SDNB - logo" class="nav-logo">
             <nav>
@@ -108,38 +111,32 @@
 
 
         <video autoplay muted loop>
-            <source src="../video/background-first-slide-sdnb-cropped-for-phone.mp4" media="(max-width:650px)">
+            <source src="../video/background-first-slide-sdnb-cropped-for-phone.mp4" media="(max-width:700px)">
             <source src="../video/background-first-slide-sdnb-mid.mp4" media="(max-width:1100px)">
             <source src="../video/background-first-slide-sdnb.mp4">
         </video>
 
     </div>
-
-    <article>
-
-        <section class="upcomming-events container">
+        <section class="upcomming-events container hidden">
 
             <h2 id="upcomming-events-h2">Nadcházející událosi</h2>
             <ul>
                 <li>
-                    <div class="event">
+                    <div class="event hidden">
                         <a href=""><img src="../img/img-events/event4-sdnb.jpg" alt=""></a>
                     </div>
                 </li>
                 <li>
-                    <div class="event">
+                    <div class="event hidden">
                         <img src="../img/img-events/event2-sdnb.jpg" alt="">
                     </div>
                 </li>
                 <li>
-                    <div class="event">
+                    <div class="event hidden">
                         <img src="../img/img-events/event3-sdnb.jpg" alt="">
                     </div>
                 </li>
             </ul>
-
-
-
         </section>
         <!-- 
         <section class="container about-us">
@@ -162,7 +159,7 @@
             </div>
         </section> -->
 
-        <section class="contact  container">
+        <section class="contact  container hidden">
             <h2 id="contact-h2">Kontakt</h2>
             <form id="contact-form">
                 <label>
@@ -182,7 +179,6 @@
         </section>
     </article>
     <!--SCRIPTS-->
-    <script src="script.js"></script>
     <script src="../js/email.js"></script>
 </body>
 

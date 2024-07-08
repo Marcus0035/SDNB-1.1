@@ -23,4 +23,3 @@ document.getElementById('contact-form').addEventListener('submit', function(even
       // Prohlížeč zobrazí výchozí upozornění na nevyplněná pole
     }
   });
-  
