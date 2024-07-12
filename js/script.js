@@ -10,7 +10,7 @@ function unmute() {
     image = document.getElementById('intro-img');
 
     // Check if audio is already playing by checking its volume or another indicator
-    if (audio.volume === 0) {
+    if (audio.volume === 0 || audio.volume === 1) {
         // If muted, set volume to 0.5 and adjust button appearance to indicate unmuted state
         audio.volume = 0.5;
         soundButton.classList.remove('bx-volume-mute');
